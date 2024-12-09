@@ -1,0 +1,64 @@
+#detalhes-projeto {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    margin: 40px;
+    text-align: center;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: row; /* Garante que a imagem e o texto fiquem lado a lado */
+    gap: 30px; /* Espaçamento entre a imagem e o texto */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    width: 100%; /* Garante que o conteúdo ocupe toda a largura disponível */
+}
+
+.project-image-link {
+    display: block; /* Torna o link um bloco, cobrindo toda a área da imagem */
+    transition: transform 0.3s ease; /* Adiciona a transição de movimento */
+}
+
+.project-image-link:hover {
+    transform: translateY(-10px); /* Eleva a imagem ao passar o mouse */
+}
+
+.project-image img {
+    max-width: 600px; /* Aumenta a largura máxima da imagem */
+    height: 350px; /* Define uma altura fixa para a imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir a área sem distorcer */
+    border-radius: 10px; /* Adiciona bordas arredondadas à imagem */
+    transition: transform 0.3s ease; /* Suaviza a transição do efeito */
+}
+
+.project-description {
+    flex: 1; /* Faz com que o texto ocupe o restante do espaço */
+    max-width: 600px; /* Limita a largura máxima do texto */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+.project-description h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+}
+
+.project-description h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+    margin-bottom: 10px; /* Adiciona um espaço abaixo do título */
+    text-align: center;
+}
+
+.project-description ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.project-description ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #666;
+}

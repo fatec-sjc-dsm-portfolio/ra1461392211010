@@ -1,11 +1,13 @@
-/* Resetando margens e preenchimento */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth; 
+}
 
-/* Barra de Navegação */
 .navbar {
     width: 100%;
     background-color: #333;
@@ -19,7 +21,7 @@
     align-items: center;
 }
 
-/* Estilo do Logotipo */
+
 .logo {
     color: #fff;
     text-decoration: none;
@@ -33,7 +35,7 @@
     margin-right: 0.5rem;
 }
 
-/* Estilo dos links na barra de navegação */
+
 .navbar ul {
     list-style-type: none;
     display: flex;
@@ -51,9 +53,9 @@
     color: #0077b5;
 }
 
-/* Ajuste para a seção principal para evitar sobreposição da navbar */
+
 #main {
-    padding-top: 80px; /* Para dar espaço para a navbar fixa */
+    padding-top: 80px; 
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -61,6 +63,7 @@
     align-items: center;
     background-color: #fff;
 }
+
 
 .container {
     display: flex;
@@ -87,7 +90,7 @@
     color: #333;
 }
 
-/* Efeito de digitação contínua */
+
 .typing {
     font-size: 1.2rem;
     color: #666;
@@ -117,7 +120,7 @@
     }
 }
 
-/* Foto de perfil */
+
 .photo .profile-photo {
     border-radius: 50%;
     width: 450px;
@@ -126,7 +129,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Box para ícones de redes sociais */
+
 .social-icons {
     margin-top: 20px;
     display: flex;
@@ -169,7 +172,7 @@
     background-color: #0088cc;
 }
 
-/* Estilos para as seções de navegação */
+
 section {
     padding: 2rem;
     text-align: center;
@@ -189,16 +192,18 @@ section p {
     margin: auto;
 }
 .project-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     padding: 2rem;
+    margin: auto;
+    max-width: 1200px;
 }
 
 .project-item {
-    width: 300px; /* Largura fixa para cada projeto */
+    width: 300px; 
     height: 300px;
     background-size: cover;
     background-position: center;
@@ -206,11 +211,19 @@ section p {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; 
+}
+
+
+.project-item.visible {
+    opacity: 1;
+    transform: translateY(0); 
 }
 
 .project-item:hover {
-    transform: translateY(-10px); /* Efeito de elevação no hover */
+    transform: translateY(-10px); 
 }
 
 .project-content {
@@ -223,6 +236,46 @@ section p {
     color: #fff;
     text-align: center;
     transition: background 0.3s;
+}
+
+.project-description {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+    font-size: 1rem;
+}
+
+.project-item:hover .project-description {
+    opacity: 1;
+}
+
+.project-item:hover .project-content {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.project-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.project-description {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; 
+    font-size: 1rem;
+}
+
+
+.project-item:hover .project-description {
+    opacity: 1;
+}
+
+.project-item:hover .project-content {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.project-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 #sobre-mim {
     padding: 3rem 2rem;
@@ -339,7 +392,7 @@ section p {
     margin: 0.3rem 0;
 }
 
-/* Ícones Sociais do Footer */
+
 .social-icons-footer {
     display: flex;
     justify-content: center;
@@ -355,5 +408,46 @@ section p {
 
 .social-box-footer:hover {
     transform: scale(1.2);
-    color: #0077b5; /* Altere conforme o estilo de cada ícone, se desejar */
+    color: #0077b5; 
+}
+#detalhes-projeto {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.project-image img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-description {
+    max-width: 600px;
+}
+
+.project-description h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.project-description h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.project-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-description ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
 }

@@ -1,0 +1,38 @@
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.footer-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0.3rem 0;
+}
+
+/* Ícones Sociais do Footer */
+.social-icons-footer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-box-footer {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-box-footer:hover {
+    transform: scale(1.2);
+    color: #0077b5; /* Altere conforme o estilo de cada ícone, se desejar */
+}
